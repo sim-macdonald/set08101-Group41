@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+	<html >
+		<head >
+			<title >Placehold title screen</title >
+			<link id="modeSheet" rel="stylesheet" href="light_mode.css">
+		</head >
+	<body onpageshow="settings()">
+		
+		<!-- <h*> for heading tag -->
+		<h1>Index</h1>
+		<!-- <p> for paragraph -->
+		<p>Links</p>
+		
+		<!-- <ul> and <li> used to make an unordered list -->
+		<ul>
+			<li><a href="lab1/branch_test.html">branch_test.html</a></li>
+			<li><a href="lab1/hello.html">hello.html</a></li>
+		</ul>
+	</body >
+
+	<!-- this onload script needs to be included on every page I think -->
+	<script>
+    /* onload stuff */
+    function settings() {
+        // Apply dark mode preference
+        if (localStorage.getItem("mode") == 1) {
+            document.getElementById("modeSheet").href = "dark_mode.css";
+        } else {
+            document.getElementById("modeSheet").href = "light_mode.css";
+        }
+    }
+	</script>
+</html >
