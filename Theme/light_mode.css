@@ -1,0 +1,60 @@
+/* light mode sheet */
+body {
+    background-color: white;
+    color: #121212;
+}
+
+button {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    z-index: 10;
+}
+
+    /* Dropdown Button */
+.button, .dropbtn {
+  background-color: #37ab77;
+  color: #121212;
+}
+
+/* Dropdown button on hover & focus */
+.button:hover, .dropbtn:hover, .dropbtn:focus {
+  background-color: #6ebc99;
+}
+
+.button:active {
+  background-color: #6ebc99;
+  transform: translateY(4px);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.fontdrop {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #b0aeae;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color:  #121212;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #9c9a9a;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
