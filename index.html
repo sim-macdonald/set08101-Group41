@@ -2,7 +2,9 @@
 	<html >
 		<head >
 			<title >Placehold title screen</title >
-			<link id="modeSheet" rel="stylesheet" href="light_mode.css">
+			<link id="modeSheet" rel="stylesheet" href="Theme/light_mode.css">
+			<link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
+			<script src="settings.js"></script>
 		</head >
 	<body onpageshow="settings()">
 		
@@ -17,17 +19,4 @@
 			<li><a href="lab1/hello.html">hello.html</a></li>
 		</ul>
 	</body >
-
-	<!-- this onload script needs to be included on every page I think -->
-	<script>
-    /* onload stuff */
-    function settings() {
-        // Apply dark mode preference
-        if (localStorage.getItem("mode") == 1) {
-            document.getElementById("modeSheet").href = "dark_mode.css";
-        } else {
-            document.getElementById("modeSheet").href = "light_mode.css";
-        }
-    }
-	</script>
 </html >
