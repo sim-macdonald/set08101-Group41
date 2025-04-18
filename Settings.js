@@ -2,9 +2,9 @@
 function settings() {
     // Apply dark mode preference
     if (localStorage.getItem("mode") == 1) {
-        document.getElementById("modeSheet").href = "dark_mode.css";
+        document.getElementById("modeSheet").href = "Theme/dark_mode.css";
     } else {
-        document.getElementById("modeSheet").href = "light_mode.css";
+        document.getElementById("modeSheet").href = "Theme/light_mode.css";
     }
 
     // Apply font preferences
@@ -25,13 +25,13 @@ function settings() {
 /* button press function */
 function darkMode() {
     /* dark mode */
-    if (document.getElementById("modeSheet").getAttribute("href") == "light_mode.css") {
-        document.getElementById("modeSheet").href = "dark_mode.css";
+    if (document.getElementById("modeSheet").getAttribute("href") == "Theme/light_mode.css") {
+        document.getElementById("modeSheet").href = "Theme/dark_mode.css";
         localStorage.setItem("mode", 1);
     }
     /* light mode */
     else {
-        document.getElementById("modeSheet").href = "light_mode.css";
+        document.getElementById("modeSheet").href = "Theme/light_mode.css";
         localStorage.setItem("mode", 0);
     }
 }
