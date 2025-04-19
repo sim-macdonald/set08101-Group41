@@ -35,7 +35,10 @@
 			cursor: not-allowed;
 			background-colour: #e7e7e7;
 		}
-		.story p, .story h, .story button{
+		.story p {
+			text-align: center;
+		}
+		.story h {
 			text-align: center;
 		}
 		.game_container {
@@ -87,7 +90,11 @@
 	<div id="story" class="story">
 		<h1>Page 2 - All the better to eat you with</h>
 	        <p>Story...</p>
-		<button class="button" onclick="startGame()">Start Game</button>
+
+		<!-- center the button with a wrapper-->
+		<div style="display: flex; justify-content: center;">
+			<button class="button" onclick="startGame()">Start Game</button>
+		</div>
 	</div>
 	<!-- Trivia Game Section -->
     	<div id="game" class="game_container">
