@@ -47,8 +47,8 @@ function checkAnswer(option) {
 }
 
 function startGame() {
-	document.getElementById("story_section").style.display = "none";
-	document.getElementById("game_section").style.display = "flex";
+	document.getElementById("story").style.display = "none";
+	document.getElementById("game").style.display = "flex";
         displayQuestion();
 }
 
