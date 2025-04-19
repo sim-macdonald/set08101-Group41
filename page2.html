@@ -30,6 +30,10 @@
 		        justify-content: space-between;
 		        width: auto;
 		}
+		.disabled {
+			cursor: not-allowed;
+			background-colour: #e7e7e7;
+		}
 		.story p, .story h{
 			text-align: center;
 		}
@@ -100,7 +104,7 @@
    	</div>
 	<div class="navigation">
 		<button onclick="home()" class="button">Home</button>
-	        <button onclick="next()" class="button">Next</button>
+	        <button onclick="next()" id="nextButton" class="button disabled">Next</button>
 	</div>
 
 	<script>
@@ -109,10 +113,7 @@
 				document.location="index.html"
 			}
 		}
-	
-		function next() {
-			document.location="page2.html"
-		}
+		
 			
 	 </script>
 
