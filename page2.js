@@ -6,9 +6,9 @@ let currentQuestionIndex = 0;
 //a list of dictionaries containing question information
 const questions_array = [
 	{
-  	question: "Q1",
-  	options: ["A) A", "B) B", "C) C", "D) D"],
-  	correctAnswer: 1
+  	question: "When used to denote time, what does PM stand for?",
+  	options: ["A) Pre Midnight", "B) Post Meridiem", "C) Past Morning", "D) Post Morning"],
+  	correctAnswer: 2
   	}
 ];
 
