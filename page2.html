@@ -30,9 +30,31 @@
             justify-content: space-between;
             width: auto;
         }
-	      .story p, .story h{
-		        text-align: center;
-	      }
+	.story p, .story h{
+	    text-align: center;
+	}
+        .trivia-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .trivia-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        .trivia-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .trivia-info {
+            font-size: 18px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body onpageshow="settings()">
