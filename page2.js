@@ -36,11 +36,11 @@ function checkAnswer(option) {
   } else {
     alert("Correct! Moving to the next question.");
     currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
+  if (currentQuestionIndex < questions_array.length) {
     displayQuestion();
   } else {
-  alert("You won! You answered all the questions correctly. You can progress.");
-    progress();
+    alert("You won! You answered all the questions correctly. You can progress.");
+    document.getElementById("nextButton").classList.remove("disabled");
   }
   }
 }
@@ -48,6 +48,14 @@ function checkAnswer(option) {
 function gameOver() {
   alert("Returning to home screen...");
   window.location.href = "index.html";
+}
+
+function next() {
+  if (CurrentQuestionIndex >= questions_arrar.length){
+    document.location="page1.html"
+	}else{
+    alert("Finish the level to move on.");
+	}
 }
 
 // Start by displaying the first question
