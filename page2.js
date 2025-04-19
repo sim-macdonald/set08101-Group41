@@ -15,7 +15,7 @@ const questions_array = [
 function displayQuestion() {
 	const current_question = questions_array[currentQuestionIndex];
   	document.getElementById("question_display").textContent = current_question.question;
-  	const buttons = document.querySelectorAll(".answer_button");
+  	const buttons = document.querySelectorAll(".answer_button button");
   	for (let i = 0; i < 4; i++) {
 		buttons[i].textContent = question.options[i];
 	}
@@ -24,7 +24,7 @@ function displayQuestion() {
 function checkAnswer(option) {
 	const current_question = questions_array[currentQuestionIndex];
 
-	if (option !== question.correctAnswer) {
+	if (option !== current_question.correctAnswer) {
 		lives--;
 	  	document.getElementById("lives").textContent = lives;
 	  	if (lives <= 0) {
