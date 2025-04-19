@@ -9,8 +9,8 @@ button {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    height: 50px;
-    z-index: 10;
+    min-height: 50px;
+    height: auto;
 }
 
     /* Dropdown Button */
