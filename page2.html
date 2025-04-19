@@ -1,0 +1,121 @@
+<html>
+<head>
+	<link id="modeSheet" rel="stylesheet" href="Theme/light_mode.css">
+	<link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
+	<script src="Settings.js"></script>
+	<style>
+		body {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto auto auto;
+			padding: 10px;
+			gap: 10px;
+		}
+		.settings_bar {
+		        display: flex;
+		        justify-content: left;
+		        padding: 10px;
+		        gap: 10px;
+		        height: auto;
+		        flex-wrap: nowrap;
+		}
+		.pictures {
+		        display: flex;
+		        justify-content: center;
+		        align-items: center;
+		        gap: 10px;
+		}
+		.navigation {
+		        display: flex;
+		        justify-content: space-between;
+		        width: auto;
+		}
+		.disabled {
+			cursor: not-allowed;
+			background-colour: #e7e7e7;
+		}
+		.story p, .story h{
+			text-align: center;
+		}
+		.game_container {
+		        display: flex;
+		        flex-direction: column;
+		        align-items: center;
+		        gap: 20px;
+		}
+		.answers {
+		        display: grid;
+		        grid-template-columns: 1fr 1fr;
+		        gap: 10px;
+		        max-width: 300px;
+		        margin-top: 20px;
+		}
+		.lives {
+		        font-size: 18px;
+		        font-weight: bold;
+		}
+	</style>
+</head>
+</head>
+<body onpageshow="settings()">
+	
+	<div class="settings_bar">
+		<!-- mode toggle button -->
+		<button onclick="darkMode()" class="button">Dark Mode</button>
+	
+		<!--dropdown for font -->
+		<div class="fontdrop">
+	        	<button class="dropbtn" onclick="fontdrop()">Font</button>
+	            	<div id="fontDropdown" class="dropdown-content">
+	                	<!--javascript:void(0); makes the webpage not change -->
+			        <a href="javascript:void(0);" onclick="changeFont('arial')">Arial</a>
+			        <a href="javascript:void(0);" onclick="changeFont('comicSans')">Comic Sans</a>
+				<a href="javascript:void(0);" onclick="changeFont('openSans')">Open Sans</a>
+			        <a href="javascript:void(0);" onclick="changeFont('verdana')">Verdana</a>
+	            	</div>
+	        </div>
+	</div>
+	<div class="pictures">
+	       	<div>
+	            	<img src="placeholder.png" alt="Witch's House">
+	        </div>
+	        <div>
+	            	<img src="placeholder.png" alt="Forest">
+	        </div>
+	</div>
+	<div class="story">
+		<h>Page 2 - All the better to eat you with</h>
+	        <p>Story...</p>
+	</div>
+	<!-- Trivia Game Section -->
+    	<div class="game_container">
+        	<div class="lives">
+            		Lives: <div id="lives">3</div>
+        	</div>
+        	<div class="trivia_question">
+            		<p id="question_display">Question?</p>
+       		</div>
+	        <div class="answers">
+	            <button class="answer_button" onclick="checkAnswer(1)">A)</button>
+	            <button class="answer_button" onclick="checkAnswer(2)">B)</button>
+	            <button class="answer_button" onclick="checkAnswer(3)">C)</button>
+	            <button class="answer_button" onclick="checkAnswer(4)">D)</button>
+	        </div>
+   	</div>
+	<div class="navigation">
+		<button onclick="home()" class="button">Home</button>
+	        <button onclick="next()" id="nextButton" class="button disabled">Next</button>
+	</div>
+
+	<script>
+		function home() {
+			if (confirm("Leaving this page will lose your current progress")){
+				document.location="index.html"
+			}
+		}
+		
+			
+	 </script>
+
+</body>
+</html>
