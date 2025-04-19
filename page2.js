@@ -46,6 +46,12 @@ function checkAnswer(option) {
 	}
 }
 
+function startGame() {
+	document.getElementById("story_section").style.display = "none";
+	document.getElementById("game_section").style.display = "flex";
+        displayQuestion();
+}
+
 function gameOver() {
 	alert("Returning to home screen...");
 	window.location.href = "index.html";
@@ -58,6 +64,3 @@ function next() {
     		alert("Finish the level to move on.");
 	}
 }
-
-// Start by displaying the first question
-displayQuestion();
