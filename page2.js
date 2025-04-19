@@ -35,9 +35,9 @@ function checkAnswer(option) {
 			alert("Wrong answer! Try again.");
 		}
 	} else {
-	    	alert("Correct! Moving to the next question.");
 	    	currentQuestionIndex++;
 	  	if (currentQuestionIndex < questions_array.length) {
+			alert("Correct! Moving to the next question.");
 	    		displayQuestion();
 	  	} else {
 	    		alert("You won! You answered all the questions correctly. You can progress.");
