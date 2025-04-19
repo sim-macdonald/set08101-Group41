@@ -15,9 +15,9 @@ const questions_array = [
 function displayQuestion() {
 	const current_question = questions_array[currentQuestionIndex];
   	document.getElementById("question_display").textContent = current_question.question;
-  	const buttons = document.querySelectorAll(".answer_button button");
+  	const buttons = document.querySelectorAll(".answer_button");
   	for (let i = 0; i < 4; i++) {
-		buttons[i].textContent = question.options[i];
+		buttons[i].textContent = current_question.options[i];
 	}
 }
 
@@ -58,7 +58,7 @@ function gameOver() {
 }
 
 function next() {
-	if (CurrentQuestionIndex >= questions_arrar.length){
+	if (CurrentQuestionIndex >= questions_arrary.length){
 		document.location="page1.html"
 	}else{
     		alert("Finish the level to move on.");
