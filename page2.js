@@ -58,7 +58,7 @@ function gameOver() {
 }
 
 function next() {
-	if (currentQuestionIndex >= questions_arrary.length){
+	if (currentQuestionIndex >= questions_array.length){
 		document.location="page1.html"
 	}else{
     		alert("Finish the level to move on.");
