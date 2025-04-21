@@ -65,6 +65,7 @@ function checkAnswer(option) {
 }
 
 function startGame() {
+	document.getElementById("wolfSound").play();
 	document.getElementById("story").style.display = "none";
 	document.getElementById("game").style.display = "flex";
         displayQuestion();
