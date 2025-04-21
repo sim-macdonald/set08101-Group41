@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trapped Ending</title>
+  <title>Game Over</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,59 +18,45 @@
       box-sizing: border-box;
     }
 
-    .message {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.4em;
-      line-height: 1.8;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-      animation: fadeIn 3s ease-out forwards;
-      opacity: 0;
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
 
-    .next-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      padding: 12px 20px;
-      font-size: 1em;
+    .btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 15px 30px;
+      font-size: 1.2em;
       color: #fff;
-      background-color: rgba(103, 58, 183, 0.85); /* magical indigo */
+      background-color: rgba(103, 58, 183, 0.85);
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
+      cursor: pointer;
       text-decoration: none;
-      box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
-      transition: background-color 0.3s, box-shadow 0.3s;
-      z-index: 10;
-
-      opacity: 0;
-      animation: fadeInButton 2s ease-out forwards;
-      animation-delay: 3.5s;
+      transition: background-color 0.3s;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.6);
     }
 
-    .next-btn:hover {
+    .btn:hover {
       background-color: rgba(94, 53, 177, 0.95);
-      box-shadow: 0 0 15px rgba(103, 58, 183, 0.8);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn.quit {
+      background-color: rgba(244, 67, 54, 0.85);
     }
 
-    @keyframes fadeInButton {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .btn.quit:hover {
+      background-color: rgba(211, 47, 47, 0.85);
     }
   </style>
 </head>
 <body>
-  <div class="message">
-    <p><strong>You chose to go alone.</strong></p>
-    <p>The cry led you deeper into the forest, and the further you went, the more the trees seemed to close in around you. You thought you could find your way, but the forest is unyielding. No matter how far you walk, the path never changes.</p>
-    <p><strong>You’ll never escape. The forest has claimed you.</strong></p>
-  </div>
-
-  <a href="final.html" class="next-btn">Next →</a>
+  <h1>Game Over</h1>
+  <p>Would you like to play again or quit the game?</p>
+  
+  <a href="index.html" class="btn">Restart Game</a>
+  <a href="goodbye.html" class="btn quit">Quit Game</a>
 </body>
 </html>
