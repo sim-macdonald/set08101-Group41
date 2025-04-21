@@ -48,8 +48,7 @@ function checkAnswer(option) {
 		lives--;
 	  	document.getElementById("lives").textContent = lives;
 	  	if (lives <= 0) {
-		var wolfSound = document.createElement("audio");
-		wolfSound.src = "wolf-howling-type-03-293313.mp3";
+		const wolfSound = document.getElementById("wolfSound");
 		wolfSound.play();
 		alert("'Game Over!' The wolf said gleefully. 'Now it's dinner time!'");
 		gameOver();
