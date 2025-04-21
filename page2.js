@@ -48,8 +48,10 @@ function checkAnswer(option) {
 		lives--;
 	  	document.getElementById("lives").textContent = lives;
 	  	if (lives <= 0) {
-		//add sfx?
-		alert("Game Over! You've run out of lives.");
+		var wolfSound = document.createElement("audio");
+		wolfSound.src = "wolf-howling-type-03-293313.mp3";
+		wolfSound.play();
+		alert("'Game Over!' The wolf said gleefully. 'Now it's dinner time!'");
 		gameOver();
 		} else {
 			alert("Wrong answer! Try again.");
@@ -57,10 +59,9 @@ function checkAnswer(option) {
 	} else {
 	    	currentQuestionIndex++;
 	  	if (currentQuestionIndex < questions_array.length) {
-			alert("Correct! Moving to the next question.");
 	    		displayQuestion();
 	  	} else {
-	    		alert("You won! You answered all the questions correctly. You can progress.");
+	    		alert("'Very smart, child. You have bested me.' The wolf sighs 'Head to the east and you should find your way home. Now go, before I change my mind'");
 	    		document.getElementById("nextButton").classList.remove("disabled");
 	  	}
 	}
