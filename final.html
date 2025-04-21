@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Over</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://4kwallpapers.com/images/walls/thumbs_3t/17273.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f4f4f4;
+      text-align: center;
+      padding: 100px 20px;
+      margin: 0;
+      position: relative;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 20px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: rgba(103, 58, 183, 0.85);
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+    }
+
+    .btn:hover {
+      background-color: rgba(94, 53, 177, 0.95);
+    }
+
+    .btn.quit {
+      background-color: rgba(244, 67, 54, 0.85);
+    }
+
+    .btn.quit:hover {
+      background-color: rgba(211, 47, 47, 0.85);
+    }
+  </style>
+</head>
+<body>
+  <h1>Game Over</h1>
+  <p>Would you like to play again or quit the game?</p>
+  
+  <a href="index.html" class="btn">Restart Game</a>
+  <a href="goodbye.html" class="btn quit">Quit Game</a>
+</body>
+</html>
