@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Final Choice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://4kwallpapers.com/images/walls/thumbs_3t/17273.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f4f4f4;
+      text-align: center;
+      padding: 80px 20px;
+      margin: 0;
+    }
+
+    h1, p, .btn {
+      opacity: 0;
+      animation-fill-mode: forwards;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      animation: fadeIn 2s ease-out forwards;
+    }
+
+    p.story {
+      font-size: 1.1em;
+      max-width: 700px;
+      margin: 0 auto 60px;
+      line-height: 1.6;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      animation: fadeIn 2s ease-out forwards;
+      animation-delay: 1.5s;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: rgba(103, 58, 183, 0.85); 
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 2px 2px 14px rgba(0,0,0,0.5);
+    }
+
+    .btn:hover {
+      background-color: rgba(94, 53, 177, 0.95);
+      box-shadow: 0 0 15px rgba(103, 58, 183, 0.8);
+    }
+
+    /* Animation timing */
+    .btn:first-of-type {
+      animation: fadeIn 2s ease-out forwards;
+      animation-delay: 6s;
+    }
+
+    .btn:last-of-type {
+      animation: fadeIn 2s ease-out forwards;
+      animation-delay: 7s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Your final decision: which path will you take?</h1>
+  <p class="story">
+    As you move through the thickening forest, a faint cry echoes in the distance—something that sounds like a wounded animal. It could be real, or it could be something else. Just then, the guide steps out from the trees and says, “There’s still a way out. Come with me.” You hesitate. You can either trust the guide and follow them, or go it alone toward the sound, hoping your instincts are right.
+  </p>
+  <a href="escape.html" class="btn">Follow the mysterious guide</a>
+  <a href="trapped.html" class="btn">Trust your instincts and go alone</a>
+</body>
+</html>
