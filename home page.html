@@ -1,35 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Enchanted Realms</title>
-  <link href="-2.jpg" rel="stylesheet">
+  <link href="-2.jpg" rel="stylesheet"> 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'MedievalSharp', cursive;
-      background: url('-2.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #f5f0dc;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
+      background: url('https://i.imgur.com/vcz2K2I.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5f0dc;
     }
 
     .overlay {
-      background: rgba(0, 0, 0, 0.6);
-      padding: 40px;
+      background: rgba(0, 0, 0, 0.75);
+      padding: 50px 30px;
       border-radius: 20px;
       text-align: center;
       max-width: 800px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
     h1 {
-      font-size: 3em;
+      font-size: 3rem;
       margin-bottom: 20px;
       color: #ffd700;
       text-shadow: 2px 2px 4px #000;
     }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .arrow-button {
+      background-color: #444;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+      padding: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .arrow-button:hover {
+      background-color: #666;
+      transform: scale(1.1);
+    }
+
+    .arrow-icon {
+      font-size: 2rem;
+      color: #ffd700;
+    }
+
+    @media (max-width: 600px) {
+      .overlay {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Welcome to Enchanted Realms</h1>
+    <p>
+      Step into a mystical world filled with magical creatures, enchanted forests, and thrilling quests.
+      Click below to begin your adventure.
+    </p>
+    <a href="about.html" class="arrow-button" aria-label="Start Adventure">
+      <span class="arrow-icon">➤</span>
+    </a>
+  </div>
+</body>
+</html>
