@@ -1,0 +1,132 @@
+<html>
+<head>
+	<link id="modeSheet" rel="stylesheet" href="Theme/light_mode.css">
+	<link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
+	<script src="Settings.js"></script>
+	<style>
+		body {
+	        	display: grid;
+	            	grid-template-columns: 1fr;
+	            	grid-template-rows: auto auto auto auto;
+	            	padding: 10px;
+	            	gap: 10px;
+	        }
+		.settings_bar {
+	            	display: flex;
+	           	justify-content: left;
+	            	padding: 10px;
+	            	gap: 10px;
+	            	height: auto;
+	            	flex-wrap: nowrap;
+	        }
+	        .pictures {
+	            	display: flex;
+	            	justify-content: center;
+	            	align-items: center;
+	            	gap: 10px;
+	        }
+	        .navigation {
+	            	display: flex;
+	            	justify-content: space-between;
+	            	width: auto;
+	        }
+		.story {
+			text-align: center;
+		}
+		.button {
+		background-color: #FFFFFF; /* White */
+		border: 2px solid #000000;
+		color: Black;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		}
+		.button:hover {
+		background-color: #000000; /* Black */
+		border: 2px solid #FFFFFF;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		}
+		.dropbtn{
+		background-color: #FFFFFF; /* White */
+		border: 2px solid #000000;
+		color: Black;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		}
+		.dropbtn:hover {
+		background-color: #000000; /* Black */
+		border: 2px solid #FFFFFF;
+		color: white;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		}
+	</style>
+</head>
+<body onpageshow="settings()">
+	
+	<div class="settings_bar">
+		<!-- mode toggle button -->
+		<button onclick="darkMode()" class="button">Dark Mode</button>
+	
+		<!--dropdown for font -->
+		<div class="fontdrop">
+	        	<button class="dropbtn" onclick="fontdrop()">Font</button>
+	            	<div id="fontDropdown" class="dropdown-content">
+	                	<!--javascript:void(0); makes the webpage not change -->
+			        <a href="javascript:void(0);" onclick="changeFont('arial')">Arial</a>
+			        <a href="javascript:void(0);" onclick="changeFont('comicSans')">Comic Sans</a>
+				<a href="javascript:void(0);" onclick="changeFont('openSans')">Open Sans</a>
+			        <a href="javascript:void(0);" onclick="changeFont('verdana')">Verdana</a>
+	            	</div>
+	        </div>
+	</div>
+	<div class="pictures">
+	       	<div>
+	            	<img src="river.png" alt="River Blocking Path" style="width:1000;height:450px;">
+			<p>Generated With NVIDIACanvas</p>
+			<audio controls autoplay>
+				<!-- Audio Source = https://www.youtube.com/watch?v=NSMqGOXulXw-->
+				<source src="river.mp3" type="audio/mpeg"> 
+			</audio>
+	        </div>
+	</div>
+	<div class="story">
+		<h>Page 3 - River</h>
+		<script>window.alert("Your Path has been blocked by a river. You cannot continue in this direction.")</script>
+	        <p>Your path has been blocked by a river.</p>
+	        <p></p>
+	        <p></p>
+	</div>
+	<div class="navigation">
+		<button onclick="home()" class="button">Home</button>
+	        <button onclick="next()" class="button">Next</button>
+	</div>
+
+	<script>
+		function home() {
+			if (confirm("Leaving this page will lose your current progress")){
+				document.location="index.html"
+			}
+		}
+	
+		function next() {
+			document.location="page4.html"
+		}
+			
+	 </script>
+
+</body>
+</html>
