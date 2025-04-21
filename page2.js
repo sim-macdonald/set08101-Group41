@@ -48,8 +48,6 @@ function checkAnswer(option) {
 		lives--;
 	  	document.getElementById("lives").textContent = lives;
 	  	if (lives <= 0) {
-		const wolfSound = document.getElementById("wolfSound");
-		wolfSound.play();
 		alert("'Game Over!' The wolf said gleefully. 'Now it's dinner time!'");
 		gameOver();
 		} else {
