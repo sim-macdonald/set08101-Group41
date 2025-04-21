@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Game Over</title>
+  <title>The End</title>
+  <link id="modeSheet" rel="stylesheet" href="Theme/light_mode.css">
+  <link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
+  <script src="Settings.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,45 +21,89 @@
       box-sizing: border-box;
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 40px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    .settings_bar {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      gap: 10px;
+      z-index: 10;
     }
 
-    .btn {
-      display: inline-block;
-      margin: 20px;
-      padding: 15px 30px;
-      font-size: 1.2em;
+    .button, .dropbtn {
+      background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
-      background-color: rgba(103, 58, 183, 0.85);
+      padding: 8px 12px;
       border: none;
-      border-radius: 8px;
+      border-radius: 5px;
       cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .fontdrop {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.7);
+      min-width: 120px;
+      z-index: 1;
+      border-radius: 4px;
+    }
+
+    .dropdown-content a {
+      color: #fff;
+      padding: 8px 12px;
       text-decoration: none;
-      transition: background-color 0.3s;
-      box-shadow: 2px 2px 12px rgba(0,0,0,0.6);
+      display: block;
+      font-size: 0.85em;
     }
 
-    .btn:hover {
-      background-color: rgba(94, 53, 177, 0.95);
+    .dropdown-content a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
     }
 
-    .btn.quit {
-      background-color: rgba(244, 67, 54, 0.85);
+    .fontdrop:hover .dropdown-content {
+      display: block;
     }
 
-    .btn.quit:hover {
-      background-color: rgba(211, 47, 47, 0.85);
+    .message {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.4em;
+      line-height: 1.8;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      animation: fadeIn 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
-<body>
-  <h1>Game Over</h1>
-  <p>Would you like to play again or quit the game?</p>
-  
-  <a href="index.html" class="btn">Restart Game</a>
-  <a href="goodbye.html" class="btn quit">Quit Game</a>
+<body onpageshow="settings()">
+  <div class="settings_bar">
+    <button onclick="darkMode()" class="button">Dark Mode</button>
+    <div class="fontdrop">
+      <button class="dropbtn" onclick="fontdrop()">Font</button>
+      <div id="fontDropdown" class="dropdown-content">
+        <a href="javascript:void(0);" onclick="changeFont('arial')">Arial</a>
+        <a href="javascript:void(0);" onclick="changeFont('comicSans')">Comic Sans</a>
+        <a href="javascript:void(0);" onclick="changeFont('openSans')">Open Sans</a>
+        <a href="javascript:void(0);" onclick="changeFont('verdana')">Verdana</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="message">
+    <p><strong>Thank you for playing.</strong></p>
+    <p>Whether you escaped or were claimed by the forest, your story has come to an end.</p>
+    <p>Choices shape destinies—and yours led you here. Until next time, traveler.</p>
+  </div>
 </body>
 </html>
