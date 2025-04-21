@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escape Ending</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url('https://4kwallpapers.com/images/walls/thumbs_3t/17273.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f4f4f4;
+      text-align: center;
+      padding: 100px 20px;
+      margin: 0;
+      position: relative;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .message {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.4em;
+      line-height: 1.8;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      animation: fadeIn 3s ease-out forwards;
+      opacity: 0;
+    }
+
+    .next-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 12px 20px;
+      font-size: 1em;
+      color: #fff;
+      background-color: rgba(103, 58, 183, 0.85);
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+      transition: background-color 0.3s, box-shadow 0.3s;
+      z-index: 10;
+
+      /* start invisible */
+      opacity: 0;
+      animation: fadeInButton 2s ease-out forwards;
+      animation-delay: 3.5s;
+    }
+
+    .next-btn:hover {
+      background-color: rgba(94, 53, 177, 0.95);
+      box-shadow: 0 0 15px rgba(103, 58, 183, 0.8);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInButton {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="message">
+    <p><strong>Congratulations!</strong> You made the right choice.</p>
+    <p>With the guide leading the way, you navigated through the final stretch of the forest. The trees began to thin, the air grew lighter, and at last—you stepped into the open.</p>
+    <p><strong>You're free.</strong></p>
+  </div>
+
+  <a href="final.html" class="next-btn">Next →</a>
+</body>
+</html>
