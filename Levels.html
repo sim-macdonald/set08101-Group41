@@ -140,7 +140,7 @@
 	      				const id = document.getElementById(level.id);
 	      				const img = id.querySelector("img");
 
-					if (localStorage.getitem(level.key)){
+					if (localStorage.getItem(level.key)){
 						id.classList.add("unlocked");
 						img.src = "questionMark.png";
 						id.removeAttribute("href");
