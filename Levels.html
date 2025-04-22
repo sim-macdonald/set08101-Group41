@@ -34,7 +34,12 @@
 					border: none;
 					padding: 0;
 					cursor: pointer;
-					text-align: center;
+					text-align: centre;
+					pointer-events: none;
+				}
+
+				.level_button.unlocked {
+					pointer-events: auto;
 				}
 
 				.level_button img {
@@ -52,6 +57,16 @@
 				        display: flex;
 				        justify-content: flex-start;
 				        width: auto;
+				}
+
+				/* hide level name*/
+				.level_button p {
+					display: none;
+				}
+
+				/* show level name*/
+				.level_button.unlocked p {
+					display: block;
 				}
 				
 			</style>
@@ -83,51 +98,52 @@
 
 		<div class="container">
 	    		<a href="page1.html" id="btnPage1" class="level_button">
-				<img src="Dark forest.jpg" alt="Into the forest">
+				<img src="questionMark.png" alt="Locked">
 				<p>Dark Forest</p>
 			</a>
 			<a href="page2.html" id="btnPage2" class="level_button">
-				<img src="Wolf.jpeg" alt="All the better to eat you with">
+				<img src="questionMark.png" alt="Locked">
 				<p>All the better to eat you with</p>
 			</a>
 			<a href="page3.html" id="btnPage3" class="level_button">
-				<img src="river.png" alt="River">
+				<img src="questionMark.png" alt="Locked">
 				<p>River</p>
 			</a>
 			<a href="choice1.html" id="btnChoice" class="level_button">
-				<img src="CoverImage.jpg" alt="Choice">
+				<img src="questionMark.png" alt="Locked">
 				<p>A Choice</p>
 			</a>
 			<a href="trapped.html" id="btnTrapped" class="level_button">
-				<img src="CoverImage.jpg" alt="Trapped">
+				<img src="questionMark.png" alt="Locked">
 				<p>Trapped</p>
 			</a>
 			<a href="escape.html" id="btnEscape" class="level_button">
-				<img src="CoverImage.jpg" alt="Escape">
+				<img src="questionMark.png" alt="Locked">
 				<p>Escape</p>
 			</a>
   		</div>
 		
 		<script>
-			//disables button if page not visited
+			//enables button if page has been visited
     			const levels = [
-      				{ id: "btnPage1", key: "visited_page1", image: "Dark forest.jpg" },
-      				{ id: "btnPage2", key: "visited_page2", image: "Wolf.jpeg" },
-      				{ id: "btnPage3", key: "visited_page3", image: "river.png" },
-      				{ id: "btnChoice", key: "visited_choice", image: "CoverImage.jpg" },
-      				{ id: "btnTrapped", key: "visited_trapped", image: "CoverImage.jpg" },
-      				{ id: "btnEscape", key: "visited_escape", image: "CoverImage.jpg" }
-    			];
+      				{id: "btnPage1", key: "visited_page1", image: "Dark forest.jpg", link: "page1.html"},
+				{id: "btnPage2", key: "visited_page2", image: "Wolf.jpeg", link: "page2.html"},
+				{id: "btnPage3", key: "visited_page3", image: "river.png", link: "page3.html"},
+				{id: "btnChoice", key: "visited_choice", image: "CoverImage.jpg", link: "choice1.html"},
+				{id: "btnTrapped", key: "visited_trapped", image: "CoverImage.jpg", link: "trapped.html"},
+				{id: "btnEscape", key: "visited_escape", image: "CoverImage.jpg", link: "escape.html"}
+				];
 
-   			for (let i = 0; i < levels.length; i++) {
-      				const level = levels[i];
-      				const id = document.getElementById(level.id);
-      				const img = btn.querySelector("img");
+   			window.onload = function () {
+				for (let i = 0; i < levels.length; i++) {
+	      				const level = levels[i];
+	      				const id = document.getElementById(level.id);
+	      				const img = btn.querySelector("img");
 
-				if (!localStorage.getitem(level.key)){
-					id.classList.add("disabled");
-					img.src = "questionMark.png";
-					id.removeAttribute("href");
+					if (!localStorage.getitem(level.key)){
+						id.classList.add("unlocked");
+						img.src = "questionMark.png";
+						id.removeAttribute("href");
 				}
 			}
 
