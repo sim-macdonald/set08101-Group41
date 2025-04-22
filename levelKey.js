@@ -1,5 +1,5 @@
 <script>
-  function visited() {
+  function visited(key) {
     localStorage.setItem(key, true);
   }
 </script>
