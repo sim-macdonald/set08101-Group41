@@ -95,7 +95,9 @@
 		}
 
 		function visited(key) {
-    			localStorage.setItem(key, 'true');
+    			if (!localStorage.getItem(key)) {
+        			localStorage.setItem(key, 'true');
+    			}
 		}
 	 </script>
 
