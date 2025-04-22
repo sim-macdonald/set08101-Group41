@@ -4,7 +4,6 @@
 	<link id="modeSheet" rel="stylesheet" href="Theme/light_mode.css">
 	<link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
 	<script src="Settings.js"></script>
-	<script src="levelKey.js"></script>
 	<style>
 		body {
 	        	display: grid;
@@ -94,7 +93,10 @@
 		function next() {
 			document.location="page2.html"
 		}
-			
+
+		function visited(key) {
+    			localStorage.setItem(key, 'true');
+		}
 	 </script>
 
 </body>
