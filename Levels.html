@@ -28,8 +28,8 @@
 				}
 
 				.level_button {
-					width: 100px;
-					height: 100px;
+					width: 200px;
+					height: 200px;
 					background: none;
 					border: none;
 					padding: 0;
@@ -38,9 +38,10 @@
 				}
 
 				.level_button img {
-					width: 200px;
-					height: 200px;
+					width: 100%;
+					height: 100%;
 					object-fit: cover;
+					border-radius: 10px;
 				}
 				
 				.disabled {
@@ -52,16 +53,7 @@
 				        justify-content: flex-start;
 				        width: auto;
 				}
-				.level_label {
-					position: absolute;
-					bottom: 0;
-					width: 100%;
-					color: white;
-					font-size: 16px;
-					padding: 5px 0;
-					border-bottom-left-radius: 10px;
-					border-bottom-right-radius: 10px;
-				}
+				
 			</style>
 		</head >
 	<body onpageshow="settings()">
@@ -92,27 +84,27 @@
 		<div class="container">
 	    		<a href="page1.html" id="btnPage1" class="level_button">
 				<img src="Dark forest.jpg" alt="Into the forest">
-				<div class="level_label">"Dark Forest"</div>
+				<p>"Dark Forest"</p>
 			</a>
 			<a href="page2.html" id="btnPage2" class="level_button">
 				<img src="Wolf.jpeg" alt="All the better to eat you with">
-				<div class="level_label">All the better to eat you with</div>
+				<p>All the better to eat you with</p>
 			</a>
 			<a href="page3.html" id="btnPage3" class="level_button">
 				<img src="river.png" alt="River">
-				<div class="level_label">River</div>
+				<p>River</div>
 			</a>
 			<a href="choice1.html" id="btnChoice" class="level_button">
 				<img src="CoverImage.jpg" alt="Choice">
-				<div class="level_label">A Choice</div>
+				<p>A Choice</p>
 			</a>
 			<a href="trapped.html" id="btnTrapped" class="level_button">
 				<img src="CoverImage.jpg" alt="Trapped">
-				<div class="level_label">Trapped</div>
+				<p>Trapped</p>
 			</a>
 			<a href="escape.html" id="btnEscape" class="level_button">
 				<img src="CoverImage.jpg" alt="Escape">
-				<div class="level_label">Escape</div>
+				<p>Escape</p>
 			</a>
   		</div>
 		
