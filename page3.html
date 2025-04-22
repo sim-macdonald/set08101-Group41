@@ -75,7 +75,7 @@
 		}
 	</style>
 </head>
-<body onpageshow="settings()">
+<body onpageshow="settings()" onload="visited('visitedPage3')">
 	
 	<div class="settings_bar">
 		<!-- mode toggle button -->
@@ -124,6 +124,12 @@
 	
 		function next() {
 			document.location="page4.html"
+		}
+
+		function visited(key) {
+    			if (!localStorage.getItem(key)) {
+        			localStorage.setItem(key, 'true');
+    			}
 		}
 			
 	 </script>
