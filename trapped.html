@@ -114,7 +114,7 @@
     }
   </style>
 </head>
-<body onpageshow="settings()">
+<body onpageshow="settings()" onload="visited('visitedTrapped')">
   <div class="settings_bar">
     <button onclick="darkMode()" class="button">Dark Mode</button>
     <div class="fontdrop">
@@ -135,5 +135,13 @@
   </div>
 
   <a href="final.html" class="next-btn">Next →</a>
+
+  <script>
+    function visited(key) {
+    			if (!localStorage.getItem(key)) {
+        			localStorage.setItem(key, 'true');
+    			}
+		}
+  </script>
 </body>
 </html>
