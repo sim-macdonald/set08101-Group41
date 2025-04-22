@@ -138,9 +138,9 @@
 				for (let i = 0; i < levels.length; i++) {
 	      				const level = levels[i];
 	      				const id = document.getElementById(level.id);
-	      				const img = btn.querySelector("img");
+	      				const img = id.querySelector("img");
 
-					if (!localStorage.getitem(level.key)){
+					if (localStorage.getitem(level.key)){
 						id.classList.add("unlocked");
 						img.src = "questionMark.png";
 						id.removeAttribute("href");
