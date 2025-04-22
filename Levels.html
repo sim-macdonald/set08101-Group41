@@ -1,0 +1,87 @@
+<!DOCTYPE html >
+	<html >
+		<head >
+			<title >Level Select</title >
+			<link id="modeSheet" rel="stylesheet" href="Theme/light_mode.css">
+			<link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
+			<script src="Settings.js"></script>
+			<style>
+				.container {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 10px;
+					justify-content: center;
+				}
+
+				.level_button {
+					width: 100px;
+					height: 100px;
+					background: none;
+					border: none;
+					padding: 0;
+					cursor: pointer;
+				}
+
+				.level_button img {
+					width: 50px;
+					height: 50px;
+					object-fit: contain;
+				}
+				
+				.disabled {
+					cursor: not-allowed;
+					background-colour: #e7e7e7;
+				}
+			</style>
+		</head >
+	<body onpageshow="settings()">
+		
+		<h1>Level Select</h1>
+
+		<div class="container">
+	    		<a href="page1.html" id="btnPage1" class="level_button">
+				<img src="Dark forest.jpg" alt="Into the forest">
+			</a>
+			<a href="page2.html" id="btnPage2" class="level_button">
+				<img src="Wolf.jpeg" alt="All the better to eat you with">
+			</a>
+			<a href="page3.html" id="btnPage3" class="level_button">
+				<img src="river.png" alt="River">
+			</a>
+			<a href="choice1.html" id="btnChoice" class="level_button">
+				<img src="CoverImage.jpg" alt="Choice">
+			</a>
+			<a href="trapped.html" id="btnTrapped" class="level_button">
+				<img src="CoverImage.jpg" alt="Trapped">
+			</a>
+			<a href="escape.html" id="btnEscape" class="level_button">
+				<img src="CoverImage.jpg" alt="Escape">
+			</a>
+  </div>
+
+		<script>
+
+			//disables button if page not visited
+    			const levels = [
+      				{ id: "btnPage1", key: "visited_page1", image: "Dark forest.jpg" },
+      				{ id: "btnPage2", key: "visited_page2", image: "Wolf.jpeg" },
+      				{ id: "btnPage3", key: "visited_page3", image: "river.png" },
+      				{ id: "btnChoice", key: "visited_choice", image: "CoverImage.jpg" },
+      				{ id: "btnTrapped", key: "visited_trapped", image: "CoverImage.jpg" },
+      				{ id: "btnEscape", key: "visited_escape", image: "CoverImage.jpg" }
+    			];
+
+   			for (let i = 0; i < levels.length; i++) {
+      				const level = levels[i];
+      				const id = document.getElementById(level.id);
+      				const img = btn.querySelector("img");
+
+				if (!localStorage.getitem(level.key)){
+					id.classList.add("disabled");
+					img.src = "questionMark.png";
+					id.removeAttribute("href");
+				}
+			}
+  </script>
+	</body >
+</html >
