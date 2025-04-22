@@ -140,10 +140,10 @@
 	      				const id = document.getElementById(level.id);
 	      				const img = id.querySelector("img");
 
+					//updates the button info if the page has been visited
 					if (localStorage.getItem(level.key)){
 						id.classList.add("unlocked");
-						img.src = "questionMark.png";
-						id.removeAttribute("href");
+						img.src = level.image;
 					}
 				}
 			}
