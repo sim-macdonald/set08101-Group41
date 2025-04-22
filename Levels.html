@@ -6,6 +6,21 @@
 			<link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
 			<script src="Settings.js"></script>
 			<style>
+				body {
+					display: grid;
+					grid-template-columns: 1fr;
+					grid-template-rows: auto auto auto auto;
+					padding: 10px;
+					gap: 10px;
+				}
+				.settings_bar {
+				        display: flex;
+				        justify-content: left;
+				        padding: 10px;
+				        gap: 10px;
+				        height: auto;
+				        flex-wrap: nowrap;
+				}
 				.container {
 					display: flex;
 					flex-wrap: wrap;
@@ -25,16 +40,38 @@
 				.level_button img {
 					width: 200px;
 					height: 200px;
-					object-fit: contain;
+					object-fit: cover;
 				}
 				
 				.disabled {
 					cursor: not-allowed;
 					background-colour: #e7e7e7;
 				}
+				.navigation {
+				        display: flex;
+				        justify-content: space-between;
+				        width: auto;
+				}
 			</style>
 		</head >
 	<body onpageshow="settings()">
+
+		<div class="settings_bar">
+			<!-- mode toggle button -->
+			<button onclick="darkMode()" class="button">Dark Mode Toggle</button>
+		
+			<!--dropdown for font -->
+			<div class="fontdrop">
+		        	<button class="dropbtn" onclick="fontdrop()">Font</button>
+		            	<div id="fontDropdown" class="dropdown-content">
+		                	<!--javascript:void(0); makes the webpage not change -->
+				        <a href="javascript:void(0);" onclick="changeFont('arial')">Arial</a>
+				        <a href="javascript:void(0);" onclick="changeFont('comicSans')">Comic Sans</a>
+					<a href="javascript:void(0);" onclick="changeFont('openSans')">Open Sans</a>
+				        <a href="javascript:void(0);" onclick="changeFont('verdana')">Verdana</a>
+		            	</div>
+		        </div>
+		</div>
 		
 		<h1>Level Select</h1>
 
@@ -57,7 +94,11 @@
 			<a href="escape.html" id="btnEscape" class="level_button">
 				<img src="CoverImage.jpg" alt="Escape">
 			</a>
-  </div>
+  		</div>
+
+		<div class="navigation">
+			<button onclick="home()" class="button">Home</button>
+		</div>
 
 		<script>
 
@@ -80,6 +121,12 @@
 					id.classList.add("disabled");
 					img.src = "questionMark.png";
 					id.removeAttribute("href");
+				}
+			}
+
+			function home() {
+				if (confirm("Leaving this page will lose your current progress")){
+					document.location="index.html"
 				}
 			}
   		</script>
