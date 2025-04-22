@@ -4,6 +4,7 @@
 	<link id="modeSheet" rel="stylesheet" href="Theme/light_mode.css">
 	<link id="fontStyle" rel="stylesheet" href="Fonts/Arial.css">
 	<script src="Settings.js"></script>
+	<script src="levelKey.js"></script>
 	<style>
 		body {
 	        	display: grid;
@@ -44,8 +45,8 @@
 	</style>
 </head>
 
-<!-- Implements saved dark mode and font settings -->
-<body onpageshow="settings()">
+<!-- Implements saved dark mode and font settings and save level unlock-->
+<body onpageshow="settings()" onload="visited('visitedPage1')">
 	
 	<div class="settings_bar">
 		<!-- mode toggle button -->
