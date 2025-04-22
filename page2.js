@@ -5,37 +5,28 @@ let currentQuestionIndex = 0;
 
 //a list of dictionaries containing question information
 const questions_array = [
-	{
-  	question: "When used to denote time, what does PM stand for?",
+	{question: "When used to denote time, what does PM stand for?",
   	options: ["A) Pre Midnight", "B) Post Meridiem", "C) Past Morning", "D) Post Morning"],
-  	correctAnswer: 2
-  	},
-	{
-  	question: "In our solar system, which planet is closest to the Sun?",
+  	correctAnswer: 2},
+	{question: "In our solar system, which planet is closest to the Sun?",
   	options: ["A) Jupiter", "B) Mercury", "C) Mars", "D) Earth"],
-  	correctAnswer: 2
-  	},
-	{
-  	question: "When dealing with computers, what does CPU stand for?",
+  	correctAnswer: 2},
+	{question: "When dealing with computers, what does CPU stand for?",
   	options: ["A)Computing Power Unit ", "B) Core Performance Unit", "C) Conductive Power Unit", "D) Central Processing Unit"],
-  	correctAnswer: 4
-  	},
-	{
-  	question: "What is the name of the sea that boarders Turkey and southeastern Europe?",
+  	correctAnswer: 4},
+	{question: "What is the name of the sea that boarders Turkey and southeastern Europe?",
   	options: ["A) Black Sea", "B) Red Sea", "C) Caspian Sea", "D) Mediterranean Sea"],
-  	correctAnswer: 1
-  	},
-	{
-  	question: "What is the most spoken native language in the world?",
+  	correctAnswer: 1},
+	{question: "What is the most spoken native language in the world?",
   	options: ["A) Arabic", "B) Spanish", "C) English", "D) Mandarin Chinese"],
-  	correctAnswer: 4
-  	}
+  	correctAnswer: 4}
 ];
 
 function displayQuestion() {
 	const current_question = questions_array[currentQuestionIndex];
   	document.getElementById("question_display").textContent = current_question.question;
   	const buttons = document.querySelectorAll(".answer_button");
+	//loops through each button, updating it with the text from the array
   	for (let i = 0; i < 4; i++) {
 		buttons[i].textContent = current_question.options[i];
 	}
