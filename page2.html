@@ -77,7 +77,8 @@
 	</style>
 </head>
 </head>
-<body onpageshow="settings()">
+<!-- Implements saved dark mode and font settings and save level unlock-->
+<body onpageshow="settings()" onload="visited('visitedPage2')">
 	
 	<div class="settings_bar">
 		<!-- mode toggle button -->
@@ -146,6 +147,12 @@
 			if (confirm("Leaving this page will lose your current progress")){
 				document.location="index.html"
 			}
+		}
+
+		function visited(key) {
+    			if (!localStorage.getItem(key)) {
+        			localStorage.setItem(key, 'true');
+    			}
 		}
 		
 			
