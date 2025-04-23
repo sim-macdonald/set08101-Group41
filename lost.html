@@ -76,7 +76,6 @@
 	</style>
 </head>
 <body onpageshow="settings()">
-	
 	<div class="settings_bar">
 		<!-- mode toggle button -->
 		<button onclick="darkMode()" class="button">Dark Mode</button>
@@ -95,39 +94,37 @@
 	</div>
 	<div class="pictures">
 	       	<div>
-	            	<img src="river.png" alt="River Blocking Path" style="width:1000;height:450px;">
-			<p>Generated With NVIDIACanvas</p>
+				<!-- https://www.pickpik.com/dark-forest-landscape-light-mystery-nature-116179 -->
+				<img src="forest.jpg" alt="compass" style="width:1000;height:450px;">
+                <p>Image from pickpik</p>
 			<audio controls autoplay>
-				<!-- Audio Source = https://www.youtube.com/watch?v=NSMqGOXulXw-->
-				<source src="river.mp3" type="audio/mpeg"> 
+				<!-- Audio Source = https://www.youtube.com/watch?v=6U1r-t_caoU -->
+				<source src="bushes.mp3" type="audio/mpeg"> 
 			</audio>
 	        </div>
 	</div>
 	<div class="story">
-		<h>Page 3 - River</h>
+		<h>Page 5 - Wrong Turn</h>
 		<script>
-		setTimeout(function() {alert('Your Path has been blocked by a river. You cannot continue in this direction.');},1250);
-		</script>
-	        <p>After beating the wolf in the forest you continued on your journey only for you to stumble upon a clearing in the dense forest, although this clearing allowed you out of the dense bush </p>
-			<p>temporarily it is clear you can no longer continue in the same direction and thus you must turn around and find another way out of the forest.</p>
-		</div>	
+        setTimeout(function() {alert('You decided to follow the bearing and distance instructions using the compass.');},1000);
+        </script>
+	        <p>the bearing and distance has taken you back into the forest to nothing, you hear bushes rustling, and you take a second look at the note and realize you may have misinterpreted the instructions, you return to the river to find your bearings again.</p>
+	    </div>
+
 	<div class="navigation">
 		<button onclick="home()" class="button">Home</button>
 	        <button onclick="next()" class="button">Next</button>
 	</div>
-
 	<script>
 		function home() {
 			if (confirm("Leaving this page will lose your current progress")){
 				document.location="index.html"
 			}
 		}
-	
 		function next() {
-			document.location="page4.html"
-		}
-			
+            alert('You decide to walk back the way you came');
+            document.location="page4.html";
+            }
 	 </script>
-
 </body>
 </html>

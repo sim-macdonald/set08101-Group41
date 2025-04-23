@@ -76,7 +76,6 @@
 	</style>
 </head>
 <body onpageshow="settings()">
-	
 	<div class="settings_bar">
 		<!-- mode toggle button -->
 		<button onclick="darkMode()" class="button">Dark Mode</button>
@@ -95,8 +94,13 @@
 	</div>
 	<div class="pictures">
 	       	<div>
-	            	<img src="river.png" alt="River Blocking Path" style="width:1000;height:450px;">
-			<p>Generated With NVIDIACanvas</p>
+				<!--https://freerangestock.com/photos/127181/close-up-of-an-open-diary-placed-on-the-beach-sand.html-->
+				<img src="paper.jpg" alt="compass" style="width:500;height:450px;">
+
+	            <!--https://freerangestock.com/photos/99833/person-holding-compass-by-water.html-->
+				<img src="compass.png" alt="compass" style="width:500;height:450px;">
+	
+				<p>Freerange - Uploaded by Unsplash | Freerange - Uploaded by Rawpixel</p>
 			<audio controls autoplay>
 				<!-- Audio Source = https://www.youtube.com/watch?v=NSMqGOXulXw-->
 				<source src="river.mp3" type="audio/mpeg"> 
@@ -104,30 +108,36 @@
 	        </div>
 	</div>
 	<div class="story">
-		<h>Page 3 - River</h>
+		<h>Page 4 - Mysterious Paper</h>
 		<script>
-		setTimeout(function() {alert('Your Path has been blocked by a river. You cannot continue in this direction.');},1250);
-		</script>
-	        <p>After beating the wolf in the forest you continued on your journey only for you to stumble upon a clearing in the dense forest, although this clearing allowed you out of the dense bush </p>
-			<p>temporarily it is clear you can no longer continue in the same direction and thus you must turn around and find another way out of the forest.</p>
-		</div>	
+        setTimeout(function() {alert('as you start to turn and find another way out of the forest your eyes meet a piece of paper and a compass sat on the floor, you approach the paper and see strange writing, you read the following.');},1000);
+        </script>
+	        <p>The paper has the following text. "XJGE LZW KAVW GX LZW JANWJ OSDC LGOSJVK UGEHSKK TWSJAFY FAFWLQ XGJ X0MJ ZMFVJWV EWLJWK LG XAFV S TJAVYW."</p>
+            <p>Maybe it is some sort of cipher?.</p>
+	    </div>
+
 	<div class="navigation">
 		<button onclick="home()" class="button">Home</button>
 	        <button onclick="next()" class="button">Next</button>
 	</div>
-
 	<script>
 		function home() {
 			if (confirm("Leaving this page will lose your current progress")){
 				document.location="index.html"
 			}
 		}
-	
 		function next() {
-			document.location="page4.html"
-		}
-			
+			const bearing = prompt("what is the bearing from the note")
+			const distance = prompt("what is the distance from the note")
+            if (bearing == 90 && distance == 400) {
+                // zenab html doc
+				alert('You followed the directions from the note and discovered a bridge, you cross the river using the bridge.');
+				document.location="choice1.html";
+            }
+            else {
+				document.location="lost.html";
+            }
+		}	
 	 </script>
-
 </body>
 </html>
